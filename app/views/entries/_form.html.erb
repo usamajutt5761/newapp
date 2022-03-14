@@ -1,0 +1,42 @@
+<%= form_with(model: entry) do |form| %>
+  <% if entry.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+
+      <ul>
+        <% entry.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :passenger_name, style: "display: block" %>
+    <%= form.text_field :passenger_name %>
+  </div>
+
+  <div>
+    <%= form.label :age, style: "display: block" %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div>
+    <%= form.label :ticket_amount, style: "display: block" %>
+    <%= form.number_field :ticket_amount %>
+  </div>
+
+  <div>
+    <%= form.label :temperature, style: "display: block" %>
+    <%= form.number_field :temperature %>
+  </div>
+
+  <div>
+    <%= form.label :seats, style: "display: block" %>
+    <%= form.number_field :seats %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

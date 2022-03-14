@@ -5,7 +5,7 @@ puts "hh"
 
 #$, = ", "
 # months = Hash.new( "month" )
-months = {"1" => "January", "2" => "February"}
+months = {"1" => "January", "1" => "February"}
 
 keys = months.keys
 
